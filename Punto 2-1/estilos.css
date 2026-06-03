@@ -1,0 +1,21 @@
+.caja{
+    width:300px;
+    padding:20px;
+    border:5px solid blue;
+    margin:30px;
+    background-color:lightblue;
+}
+
+.inline{
+    background-color:yellow;
+}
+
+.block{
+    background-color:lightgreen;
+    margin:10px 0;
+}
+
+.display-inline{
+    display:inline;
+    background-color:pink;
+}
