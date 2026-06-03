@@ -1,0 +1,42 @@
+
+.contenedor-flex{
+
+    display:flex;
+
+    flex-direction:row;
+
+    flex-wrap:wrap;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    align-content:center;
+
+    height:300px;
+
+    border:2px solid black;
+}
+
+.item{
+
+    width:150px;
+    height:100px;
+    background:lightblue;
+    border:1px solid black;
+}
+
+.item1{
+    order:2;
+    flex-grow:1;
+}
+
+.item2{
+    order:1;
+    flex-grow:2;
+}
+
+.item3{
+    order:3;
+    align-self:flex-end;
+}
