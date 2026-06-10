@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+header{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+
+
+aside{
+    background:#f4f4f4;
+    padding:20px;
+}
+
+main{
+    padding:20px;
+}
+
+article{
+    margin-bottom:20px;
+}
+
+
+
+.galeria img{
+    width:100%;
+}
+
+
+@media screen and (max-width:768px){
+
+    nav ul{
+        flex-direction:column;
+    }
+
+    .contenedor{
+        flex-direction:column;
+    }
+
+    aside,
+    main{
+        width:100%;
+    }
+
+    .galeria{
+        grid-template-columns:1fr;
+    }
+
+    footer{
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+    }
+}

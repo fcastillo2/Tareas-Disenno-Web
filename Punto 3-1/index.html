@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Diseño Web Responsivo</h1>
+    <p>Adaptando sitios web a cualquier dispositivo</p>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            Diseño Web
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#responsive">Responsive</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#viewport">Viewport</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#mediaqueries">Media Queries</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+
+<div id="carouselExample"
+     class="carousel slide"
+     data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="imagen/imagen1.png"
+                 class="d-block w-100"
+                 alt="Imagen 1">
+        </div>
+
+        <div class="carousel-item">
+            <img src="imagen/imagen2.png"
+                 class="d-block w-100"
+                 alt="Imagen 2">
+        </div>
+
+        <div class="carousel-item">
+            <img src="imagen/imagen3.png"
+                 class="d-block w-100"
+                 alt="Imagen 3">
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev">
+
+        <span class="carousel-control-prev-icon"></span>
+
+    </button>
+
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next">
+
+        <span class="carousel-control-next-icon"></span>
+
+    </button>
+
+</div>
+
+<div class="container mt-4">
+
+    <div class="row">
+
+    <aside class="col-md-3">
+        <h2>Etiqueta lateral (Aside) </h2>
+        <p>Sección de contenido que esta tangencialmente relacionado al contenido principal que lo rodea </p>
+    </aside>
+
+    <main class="col-md-9">
+
+        <article id="responsive">
+            <h2>¿Qué es el Diseño Web Responsivo?</h2>
+            <p>El Diseño Web Responsivo (o Responsive Web Design) es un enfoque de diseño y desarrollo web que consiste en crear un único sitio web capaz de adaptar su estructura, imágenes y contenidos de forma automática al tamaño de pantalla y resolución de cualquier dispositivo</p>
+        </article>
+
+        <article id="viewport">
+            <h2>Viewport</h2>
+            <p>El viewport es el área visible de una página web en la pantalla del usuario. En un dispositivo móvil, si no se dan las instrucciones correctas, los navegadores intentan renderizar el sitio como si se estuviera viendo en un monitor de escritorio, obligando al usuario a hacer zoom constantemente o a desplazarse de forma horizontal</p>
+        </article>
+
+        <article id="mediaqueries">
+            <h2>Media Queries</h2>
+            <p>Las media queries son una función fundamental de CSS3 que hace posible este diseño adaptable. Funcionan como condiciones lógicas ("si se cumple X, aplica Y") que detectan el entorno del usuario.</p>
+        </article>
+
+    </main>
+</div>
+</div>
+
+<section class="container mt-4">
+
+    <div class="row g-3">
+
+        <div class="col-12 col-sm-6 col-md-3">
+            <img src="imagen/imagen1.png"
+                 class="img-fluid rounded"
+                 alt="">
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3">
+            <img src="imagen/imagen2.png"
+                 class="img-fluid rounded"
+                 alt="">
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3">
+            <img src="imagen/imagen3.png"
+                 class="img-fluid rounded"
+                 alt="">
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3">
+            <img src="imagen/imagen4.png"
+                 class="img-fluid rounded"
+                 alt="">
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="bg-dark text-white p-4 mt-4">
+<div class="d-flex justify-content-around flex-column flex-md-row">
+
+    <div>Contenido Footer 1</div>
+
+    <div>Contenido Footer 2</div>
+
+</div>
+</footer>
+
+</body>
+</html>
