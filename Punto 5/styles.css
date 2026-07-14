@@ -1,0 +1,135 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f7fb;
+    color: #1f2937;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+code {
+    color: #a21caf;
+}
+
+.hero {
+    color: white;
+    background:
+        linear-gradient(135deg, rgba(17, 24, 39, .96), rgba(30, 64, 175, .90)),
+        radial-gradient(circle at top right, #facc15, transparent 35%);
+}
+
+.hero .lead {
+    max-width: 780px;
+}
+
+.topic-section {
+    padding-top: 5.5rem;
+    margin-top: -3rem;
+    margin-bottom: 4rem;
+}
+
+.section-heading {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.section-heading > span {
+    display: grid;
+    place-items: center;
+    min-width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    background: #111827;
+    color: #facc15;
+    font-weight: 800;
+}
+
+.section-heading h2 {
+    margin-bottom: .25rem;
+    font-weight: 800;
+}
+
+.section-heading p {
+    margin-bottom: 0;
+    color: #64748b;
+}
+
+.example-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, .07);
+}
+
+.example-card h3 {
+    font-size: 1.2rem;
+    font-weight: 750;
+    margin-bottom: 1rem;
+}
+
+.result {
+    min-height: 3rem;
+    margin-top: 1rem;
+    padding: .9rem 1rem;
+    border-left: .35rem solid #2563eb;
+    border-radius: .5rem;
+    background: #eff6ff;
+    overflow-wrap: anywhere;
+}
+
+.result.error {
+    border-left-color: #dc2626;
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.result.success {
+    border-left-color: #16a34a;
+    background: #f0fdf4;
+    color: #166534;
+}
+
+.result-list ul {
+    margin-bottom: 0;
+    padding-left: 1.25rem;
+}
+
+pre {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: .75rem;
+    background: #111827;
+    color: #e5e7eb;
+    overflow-x: auto;
+}
+
+.dom-zone {
+    padding: 1.25rem;
+    border: 2px dashed #94a3b8;
+    border-radius: .75rem;
+    background: #f8fafc;
+}
+
+.dom-highlight {
+    outline: 3px solid #f59e0b;
+    background: #fef3c7 !important;
+    transition: .2s ease;
+}
+
+@media (max-width: 767.98px) {
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .section-heading {
+        flex-direction: column;
+    }
+
+    .topic-section {
+        padding-top: 5rem;
+    }
+}

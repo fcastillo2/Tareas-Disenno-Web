@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplos prácticos de sintaxis básica de JavaScript">
+    <meta name="author" content="Fernando Castillo Ortiz">
+    <title>Tarea 5 - Sintaxis de JavaScript</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#inicio">JavaScript Lab</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+                    aria-expanded="false" aria-label="Abrir navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#control">Control</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bucles">Bucles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#funciones">Funciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#operadores">Operadores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#numeros">Números y fechas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#texto">Texto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#colecciones">Colecciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dom">DOM</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <div class="container py-5 text-center">
+            <span class="badge text-bg-warning mb-3">Diseño de Aplicaciones Web</span>
+            <h1 class="display-4 fw-bold">Sintaxis básica de JavaScript</h1>
+            <p class="lead mx-auto">
+                Página interactiva con ejemplos claros y concisos de control de flujo,
+                bucles, funciones, operadores, fechas, cadenas, arreglos y manipulación del DOM.
+            </p>
+            <a class="btn btn-warning btn-lg mt-2" href="#control">Comenzar ejemplos</a>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="alert alert-info">
+            Escriba los datos solicitados y presione los botones para ejecutar cada ejemplo.
+            Los resultados se muestran dentro de la misma página.
+        </div>
+
+        <!-- CONTROL DE FLUJO -->
+        <section id="control" class="topic-section">
+            <div class="section-heading">
+                <span>01</span>
+                <div>
+                    <h2>Control de flujo y manejo de errores</h2>
+                    <p>Uso de <code>if...else</code>, <code>switch</code>, <code>try/catch/throw</code> y objetos <code>Error</code>.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <article class="example-card h-100">
+                        <h3>if...else: clasificación de edad</h3>
+                        <label for="edad" class="form-label">Edad:</label>
+                        <input id="edad" class="form-control" type="number" min="0" placeholder="Ejemplo: 20">
+                        <button class="btn btn-primary mt-3" id="btnEdad">Clasificar</button>
+                        <div class="result" id="resultadoEdad" aria-live="polite">Resultado pendiente.</div>
+                    </article>
+                </div>
+
+                <div class="col-lg-6">
+                    <article class="example-card h-100">
+                        <h3>switch: día de la semana</h3>
+                        <label for="dia" class="form-label">Seleccione un día:</label>
+                        <select id="dia" class="form-select">
+                            <option value="1">Lunes</option>
+                            <option value="2">Martes</option>
+                            <option value="3">Miércoles</option>
+                            <option value="4">Jueves</option>
+                            <option value="5">Viernes</option>
+                            <option value="6">Sábado</option>
+                            <option value="7">Domingo</option>
+                        </select>
+                        <button class="btn btn-primary mt-3" id="btnDia">Consultar</button>
+                        <div class="result" id="resultadoDia" aria-live="polite">Resultado pendiente.</div>
+                    </article>
+                </div>
+
+                <div class="col-12">
+                    <article class="example-card">
+                        <h3>try/catch/throw y objeto Error</h3>
+                        <p>El ejemplo valida que el divisor sea diferente de cero.</p>
+                        <div class="row g-3">
+                            <div class="col-md-5">
+                                <label for="dividendo" class="form-label">Dividendo:</label>
+                                <input id="dividendo" class="form-control" type="number" value="10">
+                            </div>
+                            <div class="col-md-5">
+                                <label for="divisor" class="form-label">Divisor:</label>
+                                <input id="divisor" class="form-control" type="number" value="2">
+                            </div>
+                            <div class="col-md-2 d-flex align-items-end">
+                                <button class="btn btn-danger w-100" id="btnDividir">Dividir</button>
+                            </div>
+                        </div>
+                        <div class="result" id="resultadoDivision" aria-live="polite">Resultado pendiente.</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUCLES -->
+        <section id="bucles" class="topic-section">
+            <div class="section-heading">
+                <span>02</span>
+                <div>
+                    <h2>Bucles e iteración</h2>
+                    <p>Ejemplos con <code>for</code>, <code>while</code> y <code>do...while</code>.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <article class="example-card h-100">
+                        <h3>for</h3>
+                        <p>Genera la tabla de multiplicar del número indicado.</p>
+                        <input id="numeroTabla" class="form-control" type="number" value="5">
+                        <button class="btn btn-primary mt-3" id="btnFor">Ejecutar for</button>
+                        <div class="result result-list" id="resultadoFor">Resultado pendiente.</div>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="example-card h-100">
+                        <h3>while</h3>
+                        <p>Cuenta desde 1 hasta el límite seleccionado.</p>
+                        <input id="limiteWhile" class="form-control" type="number" min="1" max="30" value="5">
+                        <button class="btn btn-primary mt-3" id="btnWhile">Ejecutar while</button>
+                        <div class="result" id="resultadoWhile">Resultado pendiente.</div>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="example-card h-100">
+                        <h3>do...while</h3>
+                        <p>Se ejecuta al menos una vez, aunque la condición inicial sea falsa.</p>
+                        <button class="btn btn-primary" id="btnDoWhile">Ejecutar do...while</button>
+                        <div class="result" id="resultadoDoWhile">Resultado pendiente.</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FUNCIONES -->
+        <section id="funciones" class="topic-section">
+            <div class="section-heading">
+                <span>03</span>
+                <div>
+                    <h2>Funciones</h2>
+                    <p>Definición y llamada de una función reutilizable.</p>
+                </div>
+            </div>
+
+            <article class="example-card">
+                <h3>Calcular el área de un rectángulo</h3>
+                <div class="row g-3">
+                    <div class="col-md-5">
+                        <label for="baseRectangulo" class="form-label">Base:</label>
+                        <input id="baseRectangulo" class="form-control" type="number" value="8">
+                    </div>
+                    <div class="col-md-5">
+                        <label for="alturaRectangulo" class="form-label">Altura:</label>
+                        <input id="alturaRectangulo" class="form-control" type="number" value="4">
+                    </div>
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button class="btn btn-primary w-100" id="btnArea">Calcular</button>
+                    </div>
+                </div>
+                <div class="result" id="resultadoArea">Resultado pendiente.</div>
+                <pre><code>function calcularArea(base, altura) {
+    return base * altura;
+}</code></pre>
+            </article>
+        </section>
+
+        <!-- OPERADORES -->
+        <section id="operadores" class="topic-section">
+            <div class="section-heading">
+                <span>04</span>
+                <div>
+                    <h2>Expresiones y operadores</h2>
+                    <p>Asignación, comparación, operadores aritméticos y operadores lógicos.</p>
+                </div>
+            </div>
+
+            <article class="example-card">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label for="operadorA" class="form-label">Número A:</label>
+                        <input id="operadorA" class="form-control" type="number" value="10">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="operadorB" class="form-label">Número B:</label>
+                        <input id="operadorB" class="form-control" type="number" value="3">
+                    </div>
+                    <div class="col-md-4 d-flex align-items-end">
+                        <button class="btn btn-primary w-100" id="btnOperadores">Evaluar operadores</button>
+                    </div>
+                </div>
+                <div class="result result-list" id="resultadoOperadores">Resultado pendiente.</div>
+            </article>
+        </section>
+
+        <!-- NUMEROS Y FECHAS -->
+        <section id="numeros" class="topic-section">
+            <div class="section-heading">
+                <span>05</span>
+                <div>
+                    <h2>Números y fechas</h2>
+                    <p>Objetos <code>Number</code>, <code>Math</code> y <code>Date</code>.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <article class="example-card h-100">
+                        <h3>Number y Math</h3>
+                        <label for="numeroMath" class="form-label">Ingrese un número decimal:</label>
+                        <input id="numeroMath" class="form-control" type="number" step="any" value="7.45">
+                        <button class="btn btn-primary mt-3" id="btnMath">Procesar número</button>
+                        <div class="result result-list" id="resultadoMath">Resultado pendiente.</div>
+                    </article>
+                </div>
+
+                <div class="col-lg-6">
+                    <article class="example-card h-100">
+                        <h3>Date</h3>
+                        <p>Muestra información de la fecha y hora del sistema.</p>
+                        <button class="btn btn-primary" id="btnFecha">Mostrar fecha</button>
+                        <div class="result result-list" id="resultadoFecha">Resultado pendiente.</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEXTO -->
+        <section id="texto" class="topic-section">
+            <div class="section-heading">
+                <span>06</span>
+                <div>
+                    <h2>Formateo de texto</h2>
+                    <p>Cadenas literales y métodos del objeto <code>String</code>.</p>
+                </div>
+            </div>
+
+            <article class="example-card">
+                <label for="textoUsuario" class="form-label">Escriba una frase:</label>
+                <input id="textoUsuario" class="form-control" type="text" value="  JavaScript es muy útil  ">
+                <button class="btn btn-primary mt-3" id="btnTexto">Formatear texto</button>
+                <div class="result result-list" id="resultadoTexto">Resultado pendiente.</div>
+            </article>
+        </section>
+
+        <!-- COLECCIONES -->
+        <section id="colecciones" class="topic-section">
+            <div class="section-heading">
+                <span>07</span>
+                <div>
+                    <h2>Colecciones indexadas</h2>
+                    <p>Arreglos convencionales y arreglos tipados.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <article class="example-card h-100">
+                        <h3>Arreglo de estudiantes</h3>
+                        <div class="input-group">
+                            <input id="nuevoNombre" class="form-control" type="text" placeholder="Nombre del estudiante">
+                            <button class="btn btn-success" id="btnAgregarNombre">Agregar</button>
+                        </div>
+                        <button class="btn btn-outline-danger mt-3" id="btnEliminarNombre">Eliminar último</button>
+                        <div class="result" id="resultadoArreglo">Resultado pendiente.</div>
+                    </article>
+                </div>
+
+                <div class="col-lg-5">
+                    <article class="example-card h-100">
+                        <h3>Arreglo tipado</h3>
+                        <p>Se crea un <code>Int16Array</code>, apropiado para valores enteros.</p>
+                        <button class="btn btn-primary" id="btnArregloTipado">Crear arreglo tipado</button>
+                        <div class="result result-list" id="resultadoTipado">Resultado pendiente.</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOM -->
+        <section id="dom" class="topic-section">
+            <div class="section-heading">
+                <span>08</span>
+                <div>
+                    <h2>Manipulación del DOM</h2>
+                    <p>Búsqueda de elementos mediante distintos métodos de JavaScript.</p>
+                </div>
+            </div>
+
+            <article class="example-card">
+                <div class="dom-zone">
+                    <h3 id="tituloDOM">Zona de demostración DOM</h3>
+                    <p class="texto-dom">Primer párrafo con la clase <code>texto-dom</code>.</p>
+                    <p class="texto-dom destacado-dom">Segundo párrafo con dos clases.</p>
+                    <ul id="listaDOM">
+                        <li>Elemento HTML 1</li>
+                        <li>Elemento HTML 2</li>
+                        <li>Elemento HTML 3</li>
+                    </ul>
+                </div>
+
+                <div class="row g-2 mt-3">
+                    <div class="col-sm-6 col-lg-4">
+                        <button class="btn btn-outline-primary w-100 dom-button" data-dom-action="id">
+                            Buscar por ID
+                        </button>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <button class="btn btn-outline-primary w-100 dom-button" data-dom-action="tag">
+                            Buscar por etiqueta
+                        </button>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <button class="btn btn-outline-primary w-100 dom-button" data-dom-action="class">
+                            Buscar por clase
+                        </button>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <button class="btn btn-outline-primary w-100 dom-button" data-dom-action="selector">
+                            Selector CSS
+                        </button>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <button class="btn btn-outline-primary w-100 dom-button" data-dom-action="collection">
+                            Colección HTML
+                        </button>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <button class="btn btn-outline-secondary w-100" id="btnRestablecerDOM">
+                            Restablecer
+                        </button>
+                    </div>
+                </div>
+
+                <div class="result" id="resultadoDOM">Seleccione un método de búsqueda.</div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-1">Tarea 5: JavaScript</p>
+            <small>Ingeniería del Software · Diseño de Aplicaciones Web</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
